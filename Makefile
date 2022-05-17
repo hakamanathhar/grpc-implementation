@@ -1,5 +1,5 @@
 BIN = proto-go-course
-PROTO_DIR = calculator/proto
+PROTO_DIR = greet/proto
 
 ifeq ($(OS), Windows_NT)
 	OS = windows
@@ -27,8 +27,8 @@ generate:
 	
 generates:
 	protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative ${PROTO_DIR}/*.proto
-	# go build -o bin/greet/server ./greet/server
-	# go build -o bin/greet/client ./greet/client
+	go build -o bin/greet/server ./greet/server
+	go build -o bin/greet/client ./greet/client
 
 clean:
 	rm ${PROTO_DIR}/*.pb.go
