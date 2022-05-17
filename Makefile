@@ -1,5 +1,5 @@
 BIN = proto-go-course
-PROTO_DIR = greet/proto
+PROTO_DIR = calculator/proto
 
 ifeq ($(OS), Windows_NT)
 	OS = windows
